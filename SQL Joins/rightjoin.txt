@@ -1,0 +1,38 @@
+Customer Table
+CustomerId  CityId  CustomerName
+1           1       Bob Smith
+2           1       Sally Smith
+3           2       Tom Smith
+4           NULL    Mary Smith
+
+
+City Table
+CityId  CityName
+1       Kansas City
+2       New York
+3       Houston
+
+
+Query:  select * from Customer;   -   Results: entire contents of Customer Table
+Query:  select * from City;       -   Results: entire contents of City Table
+
+
+Query:  select * from Customer Right Join City on City on Customer.CityId=City.CityId
+
+Results: Matches the City table with the CityId in the City Table and displays all from the City table.
+         Since CityId 3 is not used it returns NULL on the Customer fields.
+
+Optional: using Outer - you can use Right Outer Join results will be the same
+
+Alias:  select * from Customer as cs Right Join City cy on City on cs.CityId=cy.CityId - You can Alias table names to make queries easier to type.
+
+
+query results:
+CustomerId  CityId  CustomerName    CityId  CityName
+1           1       Bob Smith       1       Kansas City
+2           1       Sally Smith     1       Kansas City
+3           2       Tom Smith       2       New York
+NULL        NULL    NULL            3       Houston
+
+
+
