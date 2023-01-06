@@ -1,6 +1,6 @@
-package Main;
+package careerdevs;
 
-import Mice.Mouse2;
+import mice.Mouse2;
 
 public class Main {
 

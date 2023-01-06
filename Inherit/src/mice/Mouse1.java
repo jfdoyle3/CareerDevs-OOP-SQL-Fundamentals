@@ -1,4 +1,4 @@
-package Mice;
+package mice;
 
 public class Mouse1 extends Mouse{
 	
